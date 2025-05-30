@@ -18,7 +18,7 @@
         regexp: 127.0.0.1
         replace: 0.0.0.0
 
-    - name: replace IP
+    - name: replace file
       ansible.builtin.lineinfile:
         path: /etc/redis/redis.conf
         regexp: protected-mode
@@ -27,5 +27,5 @@
     - name: Start redis
       ansible.builtin.service:
         name: redis
-        service: started
+        state: started
         enabled: yes
