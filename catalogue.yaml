@@ -36,8 +36,8 @@
         remote_src: yes
 
     - name: Install dependencies
-         community.general.npm:
-          path: /app
+      community.general.npm:
+        path: /app
     
     - name: Copy catalogue.service file
       ansible.builtin.copy:
@@ -75,5 +75,5 @@
     - name: load products
       ansible.builtin.shell: mongosh --host mongodb.devsecops.fun < /app/db/master-data.js
         when: catalogue_output.stdout | int < 0
-        
+
 
