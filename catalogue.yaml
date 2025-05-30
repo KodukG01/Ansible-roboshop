@@ -50,9 +50,9 @@
 
     - name: Start catalogue
       ansible.builtin.service:
-      name: catalogue
-      state: started
-      enabled: yes
+        name: catalogue
+        state: started
+        enabled: yes
 
     - name: copy mondodb.repo
       ansible.builtin.copy:
