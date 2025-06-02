@@ -50,9 +50,6 @@
         name: nginx
         state: restarted
 
-    - name: stop nginx
-      ansible.builtin.service
-        name: nginx
-        state: stopped
-        
+  
+
         
