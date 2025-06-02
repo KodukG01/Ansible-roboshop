@@ -1,5 +1,6 @@
 - name: Installing catalogue
   hosts: catalogue
+  become: yes
   tasks:
     - name: Disabling catalogue
       ansible.builtin.command: dnf module disable nodejs -y
