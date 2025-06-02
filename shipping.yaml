@@ -1,4 +1,4 @@
-- name: shipping
+- name: install shipping
   hosts: shipping
   become: yes
   tasks:
@@ -90,6 +90,6 @@
       ansible.builtin.service:
         name: shipping
         state: restarted
-        
+
     
 
